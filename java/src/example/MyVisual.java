@@ -8,6 +8,7 @@ public class MyVisual extends Visual
     WaveForm wf;
     AudioBandsVisual abv;
     CloudsBackground cb;
+    BassBall bb;
 
     int mode = 1;
     int numbersOfPurts = 3;
@@ -40,6 +41,7 @@ public class MyVisual extends Visual
         wf = new WaveForm(this);
         abv = new AudioBandsVisual(this);
         cb = new CloudsBackground(this);
+        bb = new BassBall(this);
     }
 
 
@@ -105,7 +107,7 @@ public class MyVisual extends Visual
 
 
     void partThree(){
-        color(255);
-        text("Part Three", 100, 100);
+        
+        bb.render();
     }
 }
