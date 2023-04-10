@@ -3,12 +3,12 @@ package example;
 import processing.core.*;
 
 
-public class BassBall
+public class Butterflies
 {
     MyVisual mv;
     float cy = 0;
 
-    public BassBall(MyVisual mv)
+    public Butterflies(MyVisual mv)
     {
         this.mv = mv;
         cy = this.mv.height / 2;
