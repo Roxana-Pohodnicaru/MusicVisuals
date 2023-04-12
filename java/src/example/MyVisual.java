@@ -1,27 +1,51 @@
 package example;
-
+import example.parts.BounceBall;
+import example.parts.backgrounds.CloudsBackground;
+import example.parts.backgrounds.MolecularsBC;
+import example.parts.backgrounds.SpeakersBC;
+import processing.core.*;
 import ie.tudublin.*;
+
 
 
 public class MyVisual extends Visual
 {
     WaveForm wf;
+    
     AudioBandsVisual abv;
+
+    //pt1
     CloudsBackground cb;
     BassBall bb;
     LeftBackgroundWaves Lbgw;
     RightBackgroundWaves Rbgw;
 
-    int mode = 1;
-    int numbersOfPurts = 4;
-    boolean lastPressed = false;
+    //pt2
+    BounceBall baunceBall;
+    SpeakersBC speackersBc;
 
+    //pt3
+    PoliceText pt;
+
+    //pt4
+        //todo: Roxanas ball
+
+    //p5
+    MolecularsBC molecularsBC;
+
+
+    int mode = 1;
+    int numbersOfPurts = 5;
+
+    boolean lastPressed = false;
+    
 
     public void settings()
     {
         //size(1024, 1024);
         
         // Use this to make fullscreen
+
         fullScreen();
 
         ///Use this to make fullscreen and use P3D for 3D graphics
@@ -34,18 +58,31 @@ public class MyVisual extends Visual
         startMinim();
                 
         // Call loadAudio to load an audio file to process 
-        loadAudio("Hensonn_Flare.mp3");   
-
-        
+        loadAudio("Hensonn_Flare.mp3");  
+         
         // Call this instead to read audio from the microphone
         //startListening(); 
         
         wf = new WaveForm(this);
         abv = new AudioBandsVisual(this);
+
+        //pt1
         cb = new CloudsBackground(this);
+        
+        //pt2
+        baunceBall = new BounceBall(this);
+        speackersBc = new SpeakersBC(this);
+
+        //pt3
+        pt =  new PoliceText(this);
+
+        //pt4
         bb = new BassBall(this);
         Lbgw = new LeftBackgroundWaves(this);
         Rbgw = new RightBackgroundWaves(this);
+
+        //pt5
+        molecularsBC = new MolecularsBC(this);
     }
 
 
@@ -56,7 +93,16 @@ public class MyVisual extends Visual
             getAudioPlayer().cue(0);
             getAudioPlayer().play();
         }
+        else if(key == 'p') 
+        {
+            pt.showTape = true;
+        }
+        else if(key == 'o') 
+        {
+            pt.showTape = false;
+        }
     }
+
 
 
     @Override
@@ -74,6 +120,12 @@ public class MyVisual extends Visual
                 partTwo(); 
                 break;
             case 3:
+                partThree();
+                break;   
+            case 4:
+                partFour();
+                break;   
+            case 0: 
                 partFive();
                 break;
             
@@ -82,6 +134,7 @@ public class MyVisual extends Visual
         }   
 
         keyPressingLogic();
+
 }
 
 
@@ -99,32 +152,56 @@ public class MyVisual extends Visual
     }
 
 
-    void partOne(){   
+    void partOne(){          
+        calculateAverageAmplitude(); 
+        cb.render();
 
-            wf.render();
-            abv.render();
-            text("test", 100, 100);
+        int numStars = PApplet.round(map(getAmplitude(), 0, 1, 0, 50));
+        for (int i = 0; i < numStars ; i++)
+        {
+            Stars s = new Stars(this);
+            s.draw();
+        }
     }
 
 
     void partTwo(){
-        
-        cb.render();
+        try {
+            // Call this if you want to use FFT data
+            calculateFFT(); 
+        }
+        catch(VisualException e)
+        {
+            e.printStackTrace();
+        }
+            // Call this is you want to use frequency bands
+            calculateFrequencyBands(); 
 
+            // Call this is you want to get the average amplitude
+            calculateAverageAmplitude(); 
+
+        molecularsBC.render();
+        baunceBall.render();
     }
 
 
     void partThree(){
-        
-        // pass
-        
     }
 
     void partFive()
     {
+        pt.draw();
+    }
+
+    void partFour(){
         bb.render();
         Lbgw.render();
         Rbgw.render();
+    }
 
+    void partFive(){
+        speackersBc.render();
     }
 }
+
+ 
