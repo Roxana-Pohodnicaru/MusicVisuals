@@ -1,7 +1,8 @@
 package example;
-import example.parts.Part4;
-import example.parts.Part5;
-import example.parts.PixelDisintegrationVisual;
+import example.parts.BounceBall;
+import example.parts.backgrounds.CloudsBackground;
+import example.parts.backgrounds.MolecularsBC;
+import example.parts.backgrounds.SpeakersBC;
 import processing.core.*;
 import ie.tudublin.*;
 
@@ -10,20 +11,30 @@ import ie.tudublin.*;
 public class MyVisual extends Visual
 {
     WaveForm wf;
-    Part4 p4;
-    Part5 p5;
+    
     AudioBandsVisual abv;
-    PixelDisintegrationVisual pdv;
+
+    //pt1
     CloudsBackground cb;
+
+    //pt2
+    BounceBall baunceBall;
+    SpeakersBC speackersBc;
+
+    //pt3
     PoliceText pt;
+
+    //pt4
+        //todo: Roxanas ball
+
+    //p5
+    MolecularsBC molecularsBC;
 
 
     int mode = 1;
-    int numbersOfPurts = 3;
+    int numbersOfPurts = 5;
     boolean lastPressed = false;
     
-
-
 
     public void settings()
     {
@@ -44,18 +55,27 @@ public class MyVisual extends Visual
         // Call loadAudio to load an audio file to process 
         loadAudio("Hensonn_Flare.mp3");  
          
-
-        
         // Call this instead to read audio from the microphone
         //startListening(); 
         
         wf = new WaveForm(this);
-        p4 = new Part4(this);
-        p5 = new Part5(this);
         abv = new AudioBandsVisual(this);
-        pdv = new PixelDisintegrationVisual(this);
+
+        //pt1
         cb = new CloudsBackground(this);
+
+        //pt2
+        baunceBall = new BounceBall(this);
+        speackersBc = new SpeakersBC(this);
+
+        //pt3
         pt =  new PoliceText(this);
+
+        //pt4
+        //todo: Roxanas ball
+
+        //pt5
+        molecularsBC = new MolecularsBC(this);
     }
 
 
@@ -89,8 +109,14 @@ public class MyVisual extends Visual
             case 2: 
                 partTwo(); 
                 break;
-            case 0: 
+            case 3: 
                 partThree();
+                break;   
+            case 4:
+                partFour();
+                break;   
+            case 0: 
+                partFive();
                 break;
             default:
                 break;
@@ -115,21 +141,7 @@ public class MyVisual extends Visual
     }
 
 
-
-    
-
-    void partOne(){   
-
-            wf.render();
-            abv.render();
-            text("Part One", 100, 100);
-    }
-
-
-    void partTwo(){
-        color(255);
-        text("Part Two", 100, 100);
-        
+    void partOne(){          
         calculateAverageAmplitude(); 
         cb.render();
 
@@ -139,33 +151,45 @@ public class MyVisual extends Visual
             Stars s = new Stars(this);
             s.draw();
         }
+            // wf.render();
+            // abv.render();
+            // text("Part One", 100, 100);
+    }
+
+
+    void partTwo(){
+        try {
+            // Call this if you want to use FFT data
+            calculateFFT(); 
+        }
+        catch(VisualException e)
+        {
+            e.printStackTrace();
+        }
+            // Call this is you want to use frequency bands
+            calculateFrequencyBands(); 
+
+            // Call this is you want to get the average amplitude
+            calculateAverageAmplitude(); 
+
+        molecularsBC.render();
+        baunceBall.render();
     }
 
 
     void partThree(){
-         try {
-                // Call this if you want to use FFT data
-                calculateFFT(); 
-            }
-            catch(VisualException e)
-            {
-                e.printStackTrace();
-            }
-                // Call this is you want to use frequency bands
-                calculateFrequencyBands(); 
-
-                // Call this is you want to get the average amplitude
-                calculateAverageAmplitude(); 
-
-            pdv.render();
-            p4.render();
+        pt.draw();
     }
 
     void partFour(){
-               pt.draw();
+        fill(255);
+        text("Roxana's super cool ball <3", 100, 100);
+        //todo: Roxanas ball
+    }
 
+    void partFive(){
+        speackersBc.render();
     }
 }
-    
-}
+
  
