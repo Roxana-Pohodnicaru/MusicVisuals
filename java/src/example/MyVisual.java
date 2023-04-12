@@ -16,6 +16,9 @@ public class MyVisual extends Visual
 
     //pt1
     CloudsBackground cb;
+    BassBall bb;
+    LeftBackgroundWaves Lbgw;
+    RightBackgroundWaves Rbgw;
 
     //pt2
     BounceBall baunceBall;
@@ -33,15 +36,17 @@ public class MyVisual extends Visual
 
     int mode = 1;
     int numbersOfPurts = 5;
+
     boolean lastPressed = false;
     
 
     public void settings()
     {
-        size(1024, 1024);
+        //size(1024, 1024);
         
         // Use this to make fullscreen
-        //fullScreen();
+
+        fullScreen();
 
         ///Use this to make fullscreen and use P3D for 3D graphics
         //fullScreen(P3D, SPAN); 
@@ -63,7 +68,7 @@ public class MyVisual extends Visual
 
         //pt1
         cb = new CloudsBackground(this);
-
+        
         //pt2
         baunceBall = new BounceBall(this);
         speackersBc = new SpeakersBC(this);
@@ -72,7 +77,9 @@ public class MyVisual extends Visual
         pt =  new PoliceText(this);
 
         //pt4
-        //todo: Roxanas ball
+        bb = new BassBall(this);
+        Lbgw = new LeftBackgroundWaves(this);
+        Rbgw = new RightBackgroundWaves(this);
 
         //pt5
         molecularsBC = new MolecularsBC(this);
@@ -103,13 +110,16 @@ public class MyVisual extends Visual
         background(0);
 
 		switch(mode) {
+            case 0: 
+                partThree();
+                break;
             case 1: 
                 partOne();
                 break;
             case 2: 
                 partTwo(); 
                 break;
-            case 3: 
+            case 3:
                 partThree();
                 break;   
             case 4:
@@ -118,6 +128,7 @@ public class MyVisual extends Visual
             case 0: 
                 partFive();
                 break;
+            
             default:
                 break;
         }   
@@ -145,15 +156,12 @@ public class MyVisual extends Visual
         calculateAverageAmplitude(); 
         cb.render();
 
-        
         int numStars = PApplet.round(map(getAmplitude(), 0, 1, 0, 50));
-        for (int i = 0; i < numStars ; i++){
+        for (int i = 0; i < numStars ; i++)
+        {
             Stars s = new Stars(this);
             s.draw();
         }
-            // wf.render();
-            // abv.render();
-            // text("Part One", 100, 100);
     }
 
 
@@ -178,13 +186,17 @@ public class MyVisual extends Visual
 
 
     void partThree(){
+    }
+
+    void partFive()
+    {
         pt.draw();
     }
 
     void partFour(){
-        fill(255);
-        text("Roxana's super cool ball <3", 100, 100);
-        //todo: Roxanas ball
+        bb.render();
+        Lbgw.render();
+        Rbgw.render();
     }
 
     void partFive(){
