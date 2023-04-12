@@ -3,6 +3,7 @@ package example;
 import processing.core.PConstants;
 
 public class PoliceText {
+    
 
     MyVisual mv;
     boolean showTape = false;
@@ -14,8 +15,11 @@ public class PoliceText {
     }
 
     public void draw() {
+        mv.colorMode(PConstants.HSB, 360, 100, 100);
+        
         if (showTape) {
-            mv.stroke(255, 255, 0); 
+
+            mv.stroke(60,100,100); 
             mv.strokeWeight(50);
             mv.strokeCap(PConstants.SQUARE); // round strokeCap to square
     
@@ -50,6 +54,9 @@ public class PoliceText {
             }
     
         }
+    }
+
+    private void background(int i) {
     }
     
 }

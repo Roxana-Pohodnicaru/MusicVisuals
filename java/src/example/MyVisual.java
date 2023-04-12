@@ -168,25 +168,7 @@ public class MyVisual extends Visual
         }
             // Call this is you want to use frequency bands
             calculateFrequencyBands(); 
-    void partThree(){
 
-        pt.draw();
-    }
-
-    void partFour(){
-        try {
-            // Call this if you want to use FFT data
-            calculateFFT(); 
-        }
-        catch(VisualException e)
-        {
-            e.printStackTrace();
-        }
-            // Call this is you want to use frequency bands
-            calculateFrequencyBands(); 
-
-            // Call this is you want to get the average amplitude
-            calculateAverageAmplitude(); 
             // Call this is you want to get the average amplitude
             calculateAverageAmplitude(); 
 
@@ -207,10 +189,6 @@ public class MyVisual extends Visual
 
     void partFive(){
         speackersBc.render();
-        pdv.render();
-        p4.render();
-        
-        
     }
 }
 
