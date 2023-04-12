@@ -157,7 +157,10 @@ public class MyVisual extends Visual
     }
 
     void partFour(){
-               pt.draw();
+        color(255);
+        text("Part Four", 100, 100);
+        
+        pt.draw();
 
     }
 }
