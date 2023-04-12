@@ -1,4 +1,7 @@
 package example;
+import example.parts.Part4;
+import example.parts.Part5;
+import example.parts.PixelDisintegrationVisual;
 import processing.core.*;
 import ie.tudublin.*;
 
@@ -7,7 +10,10 @@ import ie.tudublin.*;
 public class MyVisual extends Visual
 {
     WaveForm wf;
+    Part4 p4;
+    Part5 p5;
     AudioBandsVisual abv;
+    PixelDisintegrationVisual pdv;
     CloudsBackground cb;
     PoliceText pt;
 
@@ -44,10 +50,12 @@ public class MyVisual extends Visual
         //startListening(); 
         
         wf = new WaveForm(this);
+        p4 = new Part4(this);
+        p5 = new Part5(this);
         abv = new AudioBandsVisual(this);
+        pdv = new PixelDisintegrationVisual(this);
         cb = new CloudsBackground(this);
         pt =  new PoliceText(this);
-
     }
 
 
@@ -77,7 +85,6 @@ public class MyVisual extends Visual
 		switch(mode) {
             case 1: 
                 partOne();
-                
                 break;
             case 2: 
                 partTwo(); 
@@ -120,7 +127,9 @@ public class MyVisual extends Visual
 
 
     void partTwo(){
-
+        color(255);
+        text("Part Two", 100, 100);
+        
         calculateAverageAmplitude(); 
         cb.render();
 
@@ -130,18 +139,33 @@ public class MyVisual extends Visual
             Stars s = new Stars(this);
             s.draw();
         }
-
-        
-        
-
-
     }
 
 
     void partThree(){
-        pt.draw();
+         try {
+                // Call this if you want to use FFT data
+                calculateFFT(); 
+            }
+            catch(VisualException e)
+            {
+                e.printStackTrace();
+            }
+                // Call this is you want to use frequency bands
+                calculateFrequencyBands(); 
+
+                // Call this is you want to get the average amplitude
+                calculateAverageAmplitude(); 
+
+            pdv.render();
+            p4.render();
     }
 
+    void partFour(){
+               pt.draw();
+
+    }
+}
     
 }
  
