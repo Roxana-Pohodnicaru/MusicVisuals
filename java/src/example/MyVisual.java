@@ -9,9 +9,11 @@ public class MyVisual extends Visual
     AudioBandsVisual abv;
     CloudsBackground cb;
     BassBall bb;
+    LeftBackgroundWaves Lbgw;
+    RightBackgroundWaves Rbgw;
 
     int mode = 1;
-    int numbersOfPurts = 3;
+    int numbersOfPurts = 4;
     boolean lastPressed = false;
 
 
@@ -42,6 +44,8 @@ public class MyVisual extends Visual
         abv = new AudioBandsVisual(this);
         cb = new CloudsBackground(this);
         bb = new BassBall(this);
+        Lbgw = new LeftBackgroundWaves(this);
+        Rbgw = new RightBackgroundWaves(this);
     }
 
 
@@ -119,5 +123,8 @@ public class MyVisual extends Visual
     void partFive()
     {
         bb.render();
+        Lbgw.render();
+        Rbgw.render();
+
     }
 }
