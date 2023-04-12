@@ -40,13 +40,12 @@ public class MyVisual extends Visual
     boolean lastPressed = false;
     
 
-    public void settings()
-    {
-        //size(1024, 1024);
+    public void settings(){
+        size(1024, 1024);
         
         // Use this to make fullscreen
 
-        fullScreen();
+        // fullScreen();
 
         ///Use this to make fullscreen and use P3D for 3D graphics
         //fullScreen(P3D, SPAN); 
@@ -110,9 +109,6 @@ public class MyVisual extends Visual
         background(0);
 
 		switch(mode) {
-            case 0: 
-                partThree();
-                break;
             case 1: 
                 partOne();
                 break;
@@ -186,10 +182,6 @@ public class MyVisual extends Visual
 
 
     void partThree(){
-    }
-
-    void partFive()
-    {
         pt.draw();
     }
 
