@@ -60,15 +60,19 @@ public class MyVisual extends Visual
         background(0);
 
 		switch(mode) {
+            case 0: 
+                partThree();
+                break;
             case 1: 
                 partOne();
                 break;
             case 2: 
                 partTwo(); 
                 break;
-            case 0: 
-                partThree();
+            case 3:
+                partFive();
                 break;
+            
             default:
                 break;
         }   
@@ -95,7 +99,7 @@ public class MyVisual extends Visual
 
             wf.render();
             abv.render();
-            text("Part One", 100, 100);
+            text("test", 100, 100);
     }
 
 
@@ -108,7 +112,12 @@ public class MyVisual extends Visual
 
     void partThree(){
         
-        bb.render();
+        // pass
         
+    }
+
+    void partFive()
+    {
+        bb.render();
     }
 }
