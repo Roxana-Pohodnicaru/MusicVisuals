@@ -30,9 +30,13 @@ public class MyVisual extends Visual
     //p5
     MolecularsBC molecularsBC;
 
+    //p6
+    ThirdDrop td;
+
+
 
     int mode = 1;
-    int numbersOfPurts = 5;
+    int numbersOfPurts = 6;
     boolean lastPressed = false;
     
 
@@ -76,6 +80,12 @@ public class MyVisual extends Visual
 
         //pt5
         molecularsBC = new MolecularsBC(this);
+
+        //pt6
+        td = new ThirdDrop(this);
+
+        
+    
     }
 
 
@@ -114,9 +124,12 @@ public class MyVisual extends Visual
                 break;   
             case 4:
                 partFour();
-                break;   
-            case 0: 
+                break;
+            case 5:
                 partFive();
+                break;     
+            case 0: 
+                partSix();
                 break;
             default:
                 break;
@@ -189,6 +202,12 @@ public class MyVisual extends Visual
 
     void partFive(){
         speackersBc.render();
+    }
+
+    void partSix(){
+        calculateAverageAmplitude(); 
+        td.draw();
+        
     }
 }
 

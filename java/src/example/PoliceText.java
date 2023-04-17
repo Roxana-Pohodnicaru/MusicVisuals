@@ -56,7 +56,5 @@ public class PoliceText {
         }
     }
 
-    private void background(int i) {
-    }
     
 }
