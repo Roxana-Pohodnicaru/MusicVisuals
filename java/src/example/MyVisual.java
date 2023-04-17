@@ -16,9 +16,7 @@ public class MyVisual extends Visual
 
     //pt1
     CloudsBackground cb;
-    BassBall bb;
-    LeftBackgroundWaves Lbgw;
-    RightBackgroundWaves Rbgw;
+    
 
     //pt2
     BounceBall baunceBall;
@@ -28,24 +26,29 @@ public class MyVisual extends Visual
     PoliceText pt;
 
     //pt4
-        //todo: Roxanas ball
+    BassBall bb;
+    LeftBackgroundWaves Lbgw;
+    RightBackgroundWaves Rbgw;
 
     //p5
     MolecularsBC molecularsBC;
 
+    //part 6
+    Fairies fairies;
+
 
     int mode = 1;
-    int numbersOfPurts = 5;
+    int numbersOfPurts = 7;
 
     boolean lastPressed = false;
     
 
     public void settings(){
-        size(1024, 1024);
+        //size(1024, 1024);
         
         // Use this to make fullscreen
 
-        // fullScreen();
+        fullScreen();
 
         ///Use this to make fullscreen and use P3D for 3D graphics
         //fullScreen(P3D, SPAN); 
@@ -82,6 +85,9 @@ public class MyVisual extends Visual
 
         //pt5
         molecularsBC = new MolecularsBC(this);
+
+        // part 6 (cooldown)
+        fairies = new Fairies(this);
     }
 
 
@@ -124,6 +130,9 @@ public class MyVisual extends Visual
             case 0: 
                 partFive();
                 break;
+            case 6:
+                partSix();
+
             
             default:
                 break;
@@ -194,6 +203,13 @@ public class MyVisual extends Visual
     void partFive(){
         speackersBc.render();
     }
+
+    void partSix(){
+
+        fairies.render();
+
+    }
+
 }
 
  
