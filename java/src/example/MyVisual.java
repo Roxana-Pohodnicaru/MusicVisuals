@@ -24,7 +24,7 @@ public class MyVisual extends Visual
     SpeakersBC speackersBc;
 
     //pt3
-    PoliceText pt;
+    //PoliceText pt;
 
     //pt4
     BassBall bb;
@@ -78,7 +78,7 @@ public class MyVisual extends Visual
         speackersBc = new SpeakersBC(this);
 
         //pt3
-        pt =  new PoliceText(this);
+        //pt =  new PoliceText(this);
 
         //pt4
         bb = new BassBall(this);
@@ -100,14 +100,14 @@ public class MyVisual extends Visual
             getAudioPlayer().cue(0);
             getAudioPlayer().play();
         }
-        else if(key == 'p') 
-        {
-            pt.showTape = true;
-        }
-        else if(key == 'o') 
-        {
-            pt.showTape = false;
-        }
+        // else if(key == 'p') 
+        // {
+        //     pt.showTape = true;
+        // }
+        // else if(key == 'o') 
+        // {
+        //     pt.showTape = false;
+        // }
     }
 
 
@@ -192,7 +192,7 @@ public class MyVisual extends Visual
 
 
     void partThree(){
-        pt.draw();
+        //pt.draw();
     }
 
     void partFour(){
