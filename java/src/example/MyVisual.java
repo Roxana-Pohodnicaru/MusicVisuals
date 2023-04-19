@@ -38,7 +38,7 @@ public class MyVisual extends Visual
 
 
     int mode = 1;
-    int numbersOfPurts = 7;
+    int numbersOfPurts = 6;
 
     boolean lastPressed = false;
     
@@ -127,10 +127,10 @@ public class MyVisual extends Visual
             case 4:
                 partFour();
                 break;   
-            case 0: 
+            case 5: 
                 partFive();
                 break;
-            case 6:
+            case 0:
                 partSix();
 
             
