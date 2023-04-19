@@ -36,7 +36,7 @@ public class MyVisual extends Visual
 
 
     int mode = 1;
-    int numbersOfPurts = 6;
+    int numbersOfPurts = 5;
     boolean lastPressed = false;
     
 
@@ -125,12 +125,9 @@ public class MyVisual extends Visual
             case 4:
                 partFour();
                 break;
-            case 5:
+            case 0:
                 partFive();
                 break;     
-            case 0: 
-                partSix();
-                break;
             default:
                 break;
         }   
@@ -201,14 +198,12 @@ public class MyVisual extends Visual
     }
 
     void partFive(){
+        calculateAverageAmplitude(); 
         speackersBc.render();
+        td.draw();
     }
 
-    void partSix(){
-        calculateAverageAmplitude(); 
-        td.draw();
-        
-    }
+    
 }
 
  

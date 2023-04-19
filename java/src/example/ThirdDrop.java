@@ -16,17 +16,6 @@ public class ThirdDrop {
     }
 
     public void draw() {
-        // Set background color to black
-        mv.background(0);
-    
-        // Draw stars
-        mv.stroke(255);
-        mv.strokeWeight(2);
-        for (int i = 0; i < 5; i++) {
-            float x = mv.random(mv.width);
-            float y = mv.random(mv.height);
-            mv.point(x, y);
-        }
     
         // Draw mountains
         int numMountains = mountainColors.length; // number of mountains
