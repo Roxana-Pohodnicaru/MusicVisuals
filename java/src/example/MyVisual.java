@@ -221,7 +221,9 @@ public class MyVisual extends Visual
     }
 
     void partFive(){
+        calculateAverageAmplitude(); 
         speackersBc.render();
+        td.draw();
     }
 
     void partSix(){
