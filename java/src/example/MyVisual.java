@@ -44,7 +44,7 @@ public class MyVisual extends Visual
 
 
     int mode = 1;
-    int numbersOfPurts = 7;
+    int numbersOfPurts = 6;
 
 
 
@@ -93,15 +93,9 @@ public class MyVisual extends Visual
 
         //pt5
         molecularsBC = new MolecularsBC(this);
-
-
-        //pt6
         td = new ThirdDrop(this);
 
-        
-    
-
-        // part 7 
+        // part 6 
         fairies = new Fairies(this);
 
     }
@@ -146,14 +140,10 @@ public class MyVisual extends Visual
             case 5: 
                 partFive();
                 break;     
-            case 6: 
+            case 0: 
                 partSix();
                 break;
-            case 0:
-                partSeven();
-                break;
-
-            
+                  
             default:
                 break;
         }   
@@ -225,13 +215,8 @@ public class MyVisual extends Visual
         speackersBc.render();
         td.draw();
     }
-
-    void partSix(){
-        td.draw();
-        
-    }
     
-    void partSeven(){
+    void partSix(){
         fairies.render();
         
     }
