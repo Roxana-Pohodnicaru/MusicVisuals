@@ -16,6 +16,7 @@ public class MyVisual extends Visual
 
     //pt1
     CloudsBackground cb;
+    
 
     //pt2
     BounceBall baunceBall;
@@ -25,26 +26,36 @@ public class MyVisual extends Visual
     PoliceText pt;
 
     //pt4
-        //todo: Roxanas ball
+    BassBall bb;
+    LeftBackgroundWaves Lbgw;
+    RightBackgroundWaves Rbgw;
 
     //p5
     MolecularsBC molecularsBC;
+
 
     //p6
     ThirdDrop td;
 
 
+    //part 7
+    Fairies fairies;
+
+
 
     int mode = 1;
-    int numbersOfPurts = 6;
+    int numbersOfPurts = 7;
+
+
+
     boolean lastPressed = false;
     
 
-    public void settings()
-    {
+    public void settings(){
         size(1024, 1024);
         
         // Use this to make fullscreen
+
         //fullScreen();
 
         ///Use this to make fullscreen and use P3D for 3D graphics
@@ -67,7 +78,7 @@ public class MyVisual extends Visual
 
         //pt1
         cb = new CloudsBackground(this);
-
+        
         //pt2
         baunceBall = new BounceBall(this);
         speackersBc = new SpeakersBC(this);
@@ -76,16 +87,23 @@ public class MyVisual extends Visual
         pt =  new PoliceText(this);
 
         //pt4
-        //todo: Roxanas ball
+        bb = new BassBall(this);
+        Lbgw = new LeftBackgroundWaves(this);
+        Rbgw = new RightBackgroundWaves(this);
 
         //pt5
         molecularsBC = new MolecularsBC(this);
+
 
         //pt6
         td = new ThirdDrop(this);
 
         
     
+
+        // part 7 
+        fairies = new Fairies(this);
+
     }
 
 
@@ -119,18 +137,23 @@ public class MyVisual extends Visual
             case 2: 
                 partTwo(); 
                 break;
-            case 3: 
+            case 3:
                 partThree();
                 break;   
             case 4:
                 partFour();
                 break;
-            case 5:
+            case 5: 
                 partFive();
                 break;     
-            case 0: 
+            case 6: 
                 partSix();
                 break;
+            case 0:
+                partSeven();
+                break;
+
+            
             default:
                 break;
         }   
@@ -158,15 +181,12 @@ public class MyVisual extends Visual
         calculateAverageAmplitude(); 
         cb.render();
 
-        
         int numStars = PApplet.round(map(getAmplitude(), 0, 1, 0, 50));
-        for (int i = 0; i < numStars ; i++){
+        for (int i = 0; i < numStars ; i++)
+        {
             Stars s = new Stars(this);
             s.draw();
         }
-            // wf.render();
-            // abv.render();
-            // text("Part One", 100, 100);
     }
 
 
@@ -195,9 +215,9 @@ public class MyVisual extends Visual
     }
 
     void partFour(){
-        fill(255);
-        text("Roxana's super cool ball <3", 100, 100);
-        //todo: Roxanas ball
+        bb.render();
+        Lbgw.render();
+        Rbgw.render();
     }
 
     void partFive(){
@@ -205,10 +225,15 @@ public class MyVisual extends Visual
     }
 
     void partSix(){
-        calculateAverageAmplitude(); 
         td.draw();
         
     }
+    
+    void partSeven(){
+        fairies.render();
+        
+    }
+
 }
 
  
