@@ -3,6 +3,7 @@ import example.parts.BounceBall;
 import example.parts.backgrounds.CloudsBackground;
 import example.parts.backgrounds.MolecularsBC;
 import example.parts.backgrounds.SpeakersBC;
+import example.parts.backgrounds.Planet;
 import processing.core.*;
 import ie.tudublin.*;
 
@@ -16,9 +17,7 @@ public class MyVisual extends Visual
 
     //pt1
     CloudsBackground cb;
-    BassBall bb;
-    LeftBackgroundWaves Lbgw;
-    RightBackgroundWaves Rbgw;
+    
 
     //pt2
     BounceBall baunceBall;
@@ -28,19 +27,25 @@ public class MyVisual extends Visual
     PoliceText pt;
 
     //pt4
-        //todo: Roxanas ball
+    BassBall bb;
+    LeftBackgroundWaves Lbgw;
+    RightBackgroundWaves Rbgw;
 
     //p5
     MolecularsBC molecularsBC;
 
+    //p7
+    Planet planet;
+
 
     int mode = 1;
-    int numbersOfPurts = 5;
+    int numbersOfPurts = 6;
 
     boolean lastPressed = false;
     
 
     public void settings(){
+
         size(1024, 1024);
         
         // Use this to make fullscreen
@@ -82,6 +87,9 @@ public class MyVisual extends Visual
 
         //pt5
         molecularsBC = new MolecularsBC(this);
+
+        //pt 6 (with fairies)
+        planet = new Planet(this);
     }
 
 
@@ -121,9 +129,11 @@ public class MyVisual extends Visual
             case 4:
                 partFour();
                 break;   
-            case 0: 
+            case 5: 
                 partFive();
                 break;
+            case 0:
+                partSix();
             
             default:
                 break;
@@ -193,6 +203,13 @@ public class MyVisual extends Visual
 
     void partFive(){
         speackersBc.render();
+    }
+
+    void partSix(){
+        planet.render();
+        fill(255);
+        text("testing part 6", 100, 100);
+
     }
 }
 
