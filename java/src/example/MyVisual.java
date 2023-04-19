@@ -44,7 +44,7 @@ public class MyVisual extends Visual
 
 
     int mode = 1;
-    int numbersOfPurts = 6;
+    int numbersOfPurts = 5;
 
 
 
@@ -136,12 +136,9 @@ public class MyVisual extends Visual
                 break;   
             case 4:
                 partFour();
-                break;
-            case 5: 
-                partFive();
-                break;     
+                break;   
             case 0: 
-                partSix();
+                partFive();
                 break;
                   
             default:
@@ -201,22 +198,18 @@ public class MyVisual extends Visual
 
 
     void partThree(){
-        //pt.draw();
-    }
-
-    void partFour(){
         bb.render();
         Lbgw.render();
         Rbgw.render();
     }
 
-    void partFive(){
+    void partFour(){
         calculateAverageAmplitude(); 
         speackersBc.render();
         td.draw();
     }
     
-    void partSix(){
+    void partFive(){
         fairies.render();
         
     }
