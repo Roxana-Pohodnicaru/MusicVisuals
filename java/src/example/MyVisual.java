@@ -33,12 +33,20 @@ public class MyVisual extends Visual
     //p5
     MolecularsBC molecularsBC;
 
-    //part 6
+
+    //p6
+    ThirdDrop td;
+
+
+    //part 7
     Fairies fairies;
 
 
+
     int mode = 1;
-    int numbersOfPurts = 6;
+    int numbersOfPurts = 7;
+
+
 
     boolean lastPressed = false;
     
@@ -86,8 +94,16 @@ public class MyVisual extends Visual
         //pt5
         molecularsBC = new MolecularsBC(this);
 
-        // part 6 (cooldown)
+
+        //pt6
+        td = new ThirdDrop(this);
+
+        
+    
+
+        // part 7 
         fairies = new Fairies(this);
+
     }
 
 
@@ -126,12 +142,16 @@ public class MyVisual extends Visual
                 break;   
             case 4:
                 partFour();
-                break;   
+                break;
             case 5: 
                 partFive();
+                break;     
+            case 6: 
+                partSix();
                 break;
             case 0:
-                partSix();
+                partSeven();
+                break;
 
             
             default:
@@ -205,9 +225,13 @@ public class MyVisual extends Visual
     }
 
     void partSix(){
-
+        td.draw();
+        
+    }
+    
+    void partSeven(){
         fairies.render();
-
+        
     }
 
 }
