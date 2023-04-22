@@ -32,6 +32,7 @@ public class MyVisual extends Visual
 
     //p5
     MolecularsBC molecularsBC;
+    Lyrics Lyrics;
 
 
     //p6
@@ -49,6 +50,8 @@ public class MyVisual extends Visual
 
 
     boolean lastPressed = false;
+    boolean showLyrics = false;
+
     
 
     public void settings(){
@@ -94,6 +97,7 @@ public class MyVisual extends Visual
         //pt5
         molecularsBC = new MolecularsBC(this);
         td = new ThirdDrop(this);
+        Lyrics = new Lyrics(this);
 
         // part 6 
         fairies = new Fairies(this);
@@ -108,14 +112,14 @@ public class MyVisual extends Visual
             getAudioPlayer().cue(0);
             getAudioPlayer().play();
         }
-        // else if(key == 'p') 
-        // {
-        //     pt.showTape = true;
-        // }
-        // else if(key == 'o') 
-        // {
-        //     pt.showTape = false;
-        // }
+        else if(key == 'p') 
+        {
+            showLyrics = true;
+        }
+        else if(key == 'o') 
+        {
+            showLyrics = false;
+        }
     }
 
 
@@ -194,6 +198,10 @@ public class MyVisual extends Visual
 
         molecularsBC.render();
         baunceBall.render();
+        if (showLyrics) {
+            Lyrics.update();
+            Lyrics.render();
+        }
     }
 
 
