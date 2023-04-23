@@ -156,16 +156,31 @@ public class MyVisual extends Visual
 
     void keyPressingLogic(){
         if(keyPressed){
-            if(key == 'n'){
-                if(!lastPressed){
-                    mode = (mode+1) % numbersOfPurts;
-                }
-                lastPressed = true;
+            switch(key){
+                case '1':
+                    mode = 1;
+                    break;
+                case '2':
+                    mode = 2;
+                    break;
+                case '3':
+                    mode = 3;
+                    break;
+                case '4':
+                    mode = 4;
+                    break;
+                case '5':
+                    mode = 0;
+                    break;
+                default:
+                    break;
             }
+            lastPressed = true;
         } else{
             lastPressed = false;
         }
     }
+
 
 
     void partOne(){          
