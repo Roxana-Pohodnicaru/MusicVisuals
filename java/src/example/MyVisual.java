@@ -50,7 +50,7 @@ public class MyVisual extends Visual
         
         // Use this to make fullscreen
 
-        // fullScreen();
+        //fullScreen();
 
         ///Use this to make fullscreen and use P3D for 3D graphics
         //fullScreen(P3D, SPAN); 
@@ -207,8 +207,7 @@ public class MyVisual extends Visual
 
     void partSix(){
         planet.render();
-        fill(255);
-        text("testing part 6", 100, 100);
+        
 
     }
 }
