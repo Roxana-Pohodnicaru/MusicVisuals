@@ -52,6 +52,7 @@ public class MyVisual extends Visual
     
 
     public void settings(){
+
         size(1024, 1024);
         
         // Use this to make fullscreen
@@ -201,13 +202,14 @@ public class MyVisual extends Visual
         baunceBall.render();
     }
 
-
+    
     void partThree(){
 
         bb.render();
         Lbgw.render();
         Rbgw.render();
     }
+
 
     void partFour(){
         calculateAverageAmplitude(); 
