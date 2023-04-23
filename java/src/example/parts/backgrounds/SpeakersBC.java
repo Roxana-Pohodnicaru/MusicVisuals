@@ -5,8 +5,8 @@ import example.MyVisual;
 public class SpeakersBC {
 
     MyVisual mv;
-    int ballX;
     int ballY;
+    int ballX;
 
     public SpeakersBC(MyVisual mv){
         this.mv = mv;
@@ -15,6 +15,8 @@ public class SpeakersBC {
     }
 
     public void render(){
+        mv.colorMode(mv.RGB);
+        mv.background(111,45,168);
         float squareSize = 20;
             mv.noStroke();
             for(int i = 0 ; i < mv.getAudioBuffer().size() ; i ++) {

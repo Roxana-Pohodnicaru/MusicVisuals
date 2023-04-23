@@ -34,12 +34,19 @@ public class MyVisual extends Visual
     //p5
     MolecularsBC molecularsBC;
 
-    //p7
+    //p6
+    ThirdDrop td;
+
+    //part 7
+    Fairies fairies;
     Planet planet;
+
 
 
     int mode = 1;
     int numbersOfPurts = 6;
+
+
 
     boolean lastPressed = false;
     
@@ -88,8 +95,13 @@ public class MyVisual extends Visual
         //pt5
         molecularsBC = new MolecularsBC(this);
 
-        //pt 6 (with fairies)
+        //pt 6
+        td = new ThirdDrop(this);
+
+        // part 7
         planet = new Planet(this);
+        fairies = new Fairies(this);
+        
     }
 
 
@@ -134,7 +146,7 @@ public class MyVisual extends Visual
                 break;
             case 0:
                 partSix();
-            
+                break;
             default:
                 break;
         }   
@@ -190,26 +202,35 @@ public class MyVisual extends Visual
         baunceBall.render();
     }
 
-
+    
+    // delete this??
     void partThree(){
+    
         //pt.draw();
     }
 
     void partFour(){
+    
         bb.render();
         Lbgw.render();
         Rbgw.render();
     }
 
-    void partFive(){
+    void partFour(){
+        calculateAverageAmplitude(); 
         speackersBc.render();
+        td.draw();
+    }
+    
+    void partFive(){
+        
+        // steph piano tiles
     }
 
     void partSix(){
-        planet.render();
         
+        fairies.render();
+        planet.render();
 
     }
 }
-
- 
