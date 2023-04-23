@@ -1,13 +1,12 @@
 # Music Visualiser Project
 
-Student 1
-Name: Stephanie Ifeoma Ogu Student Number: D22126511
 
-Student 2
-Name: Nikka Omo Student Number: C21359691
+| Student Name | Student Number |
+|-----------|-----------|
+|Stephanie Ifeoma Ogu | D22126511 |
+|Nikka Omo | C21359691 |
+|Roxana Pohodnicaru | C21446942 |
 
-Student 3
-Name: Roxana Pohodnicaru Student Number: C21446942
 
 # Description of the assignment
 
@@ -85,13 +84,3 @@ This is an image using an absolute URL:
 This is a youtube video:
 
 [![YouTube](http://img.youtube.com/vi/J2kHSSFA4NU/0.jpg)](https://www.youtube.com/watch?v=J2kHSSFA4NU)
-
-This is a table:
-
-| Heading 1 | Heading 2 |
-|-----------|-----------|
-|Some stuff | Some more stuff in this column |
-|Some stuff | Some more stuff in this column |
-|Some stuff | Some more stuff in this column |
-|Some stuff | Some more stuff in this column |
-
