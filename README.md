@@ -32,12 +32,9 @@
 
 # What I am most proud of in the assignment
 
+Stephanie Ifeoma Ogu:
 
 Nikka Omo:
-
-
-Stephanie Ogu:
-
 
 Roxana Pohodnicaru: 
 This is the first big collaborative coding project I’ve worked and I can definitely say that I learned a lot from this experience. 
