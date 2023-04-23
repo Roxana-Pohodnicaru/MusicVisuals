@@ -1,5 +1,6 @@
 # Music Visualiser Project
 
+# Group Members
 
 | Student Name | Student Number |
 |-----------|-----------|
@@ -7,12 +8,27 @@
 |Nikka Omo | C21359691 |
 |Roxana Pohodnicaru | C21446942 |
 
+# Visualisation Video
 
-# Description of the assignment
+[insert youtube link here]
+
+# Description of the Assignment
+
+- what song we chose
+- how many visuals we have
+- what do visuals do
+- mention processing + minim
 
 # Instructions
 
+- how we use buttons to move through parts
+- space restart
+
 # How it works
+
+- how we created dev branch -> treated it as master (incase of issues) and made branches from there
+- each of us have our own sections talking about what we coded + how + insert pics of it (can include code too if you want)
+- mention how we combined our workings together
 
 # What I am most proud of in the assignment
 
