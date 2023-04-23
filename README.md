@@ -40,7 +40,6 @@ Stephanie Ogu:
 
 
 Roxana Pohodnicaru: 
-
 This is the first big collaborative coding project I’ve worked and I can definitely say that I learned a lot from this experience. 
 I encountered a  number of issues when I started this project because I had very little knowledge of Java or Processing. In overcoming these difficulties, I’ve become more confident and improved my coding skills. I discovered that the combination of Java and Processing is fun to experiment with.
 
