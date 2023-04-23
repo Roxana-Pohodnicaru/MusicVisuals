@@ -1,22 +1,13 @@
 # Music Visualiser Project
 
-
 Student 1
-Name: Stephanie Ifeoma Ogu
-
-Student Number: D22126511
-
+Name: Stephanie Ifeoma Ogu Student Number: D22126511
 
 Student 2
-Name: Nikka Omo
-
-Student Number: C21359691
-
+Name: Nikka Omo Student Number: C21359691
 
 Student 3
-Name: Roxana Pohodnicaru
-
-Student Number: C21446942
+Name: Roxana Pohodnicaru Student Number: C21446942
 
 
 ## Instructions
