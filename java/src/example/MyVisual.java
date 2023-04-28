@@ -33,6 +33,7 @@ public class MyVisual extends Visual
 
     //p5
     MolecularsBC molecularsBC;
+    Lyrics Lyrics;
 
     //p6
     ThirdDrop td;
@@ -49,6 +50,8 @@ public class MyVisual extends Visual
 
 
     boolean lastPressed = false;
+    boolean showLyrics = false;
+
     
 
     public void settings(){
@@ -97,6 +100,7 @@ public class MyVisual extends Visual
 
         //pt 6
         td = new ThirdDrop(this);
+        Lyrics = new Lyrics(this);
 
         // part 7
         planet = new Planet(this);
@@ -112,14 +116,14 @@ public class MyVisual extends Visual
             getAudioPlayer().cue(0);
             getAudioPlayer().play();
         }
-        // else if(key == 'p') 
-        // {
-        //     pt.showTape = true;
-        // }
-        // else if(key == 'o') 
-        // {
-        //     pt.showTape = false;
-        // }
+        else if(key == 'p') 
+        {
+            showLyrics = true;
+        }
+        else if(key == 'o') 
+        {
+            showLyrics = false;
+        }
     }
 
 
@@ -158,16 +162,31 @@ public class MyVisual extends Visual
 
     void keyPressingLogic(){
         if(keyPressed){
-            if(key == 'n'){
-                if(!lastPressed){
-                    mode = (mode+1) % numbersOfPurts;
-                }
-                lastPressed = true;
+            switch(key){
+                case '1':
+                    mode = 1;
+                    break;
+                case '2':
+                    mode = 2;
+                    break;
+                case '3':
+                    mode = 3;
+                    break;
+                case '4':
+                    mode = 4;
+                    break;
+                case '5':
+                    mode = 0;
+                    break;
+                default:
+                    break;
             }
+            lastPressed = true;
         } else{
             lastPressed = false;
         }
     }
+
 
 
     void partOne(){          
@@ -200,6 +219,10 @@ public class MyVisual extends Visual
 
         molecularsBC.render();
         baunceBall.render();
+        if (showLyrics) {
+            Lyrics.update();
+            Lyrics.render();
+        }
     }
 
     
