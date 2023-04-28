@@ -5,7 +5,7 @@
 | Student Name | Student Number |
 |-----------|-----------|
 |Stephanie Ifeoma Ogu | D22126511 |
-|Nikka Omo | C21359691 |
+|Nikka May Omo | C21359691 |
 |Roxana Pohodnicaru | C21446942 |
 
 # Visualisation Video
