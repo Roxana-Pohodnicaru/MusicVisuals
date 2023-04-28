@@ -34,7 +34,9 @@
 
 Stephanie Ifeoma Ogu:
 
-Nikka Omo:
+Nikka May Omo: This assignment has me achieve a significant progress in my learning journey for this module. I am most proud of the growth in terms of teamwork and learning more about how to visualise our creative ideas using processing. I was able to become productive and fulfill the deadline we set up thanks to our strict planning and frequent meetings. 
+
+As a student who was worried at the start, I can confidently conclude I am satisfied with the work I contributed. I think the key achievement is that we were able to leverage each other's strengths and overcome any errors that arose during the project. This not only led to a successful outcome but also help me develop interpersonal skills that will serve me well in other future projects.
 
 Roxana Pohodnicaru: 
 This is the first big collaborative coding project I’ve worked and I can definitely say that I learned a lot from this experience. 
