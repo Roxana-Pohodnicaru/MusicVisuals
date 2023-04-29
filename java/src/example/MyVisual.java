@@ -1,16 +1,22 @@
 package example;
 import example.parts.BounceBall;
+import example.parts.Piano;
+import example.parts.backgrounds.CirclesBc;
 import example.parts.backgrounds.CloudsBackground;
 import example.parts.backgrounds.MolecularsBC;
 import example.parts.backgrounds.SpeakersBC;
 import example.parts.backgrounds.Planet;
 import processing.core.*;
 import ie.tudublin.*;
+import java.awt.Frame;
+
 
 
 
 public class MyVisual extends Visual
 {
+    Frame myFrame = new Frame();
+
     WaveForm wf;
     
     AudioBandsVisual abv;
@@ -24,30 +30,26 @@ public class MyVisual extends Visual
     SpeakersBC speackersBc;
 
     //pt3
-    //PoliceText pt;
-
-    //pt4
     BassBall bb;
     LeftBackgroundWaves Lbgw;
     RightBackgroundWaves Rbgw;
 
-    //p5
+    //p4
     MolecularsBC molecularsBC;
     Lyrics Lyrics;
 
-    //p6
+    //p5
+    CirclesBc cbc;
+    Piano piano;
+
+    //pt6
     ThirdDrop td;
 
-    //part 7
+    //pt7
     Fairies fairies;
     Planet planet;
 
-
-
     int mode = 1;
-    int numbersOfPurts = 6;
-
-
 
     boolean lastPressed = false;
     boolean showLyrics = false;
@@ -56,11 +58,12 @@ public class MyVisual extends Visual
 
     public void settings(){
 
-        size(1024, 1024);
+        size(800, 800);
         
         // Use this to make fullscreen
 
-        fullScreen();
+       // fullScreen();
+       size(displayWidth, displayHeight);
 
         ///Use this to make fullscreen and use P3D for 3D graphics
         //fullScreen(P3D, SPAN); 
@@ -69,6 +72,8 @@ public class MyVisual extends Visual
 
     public void setup()
     {
+        myFrame.setExtendedState(Frame.MAXIMIZED_BOTH);
+        myFrame.setUndecorated(true);
         startMinim();
                 
         // Call loadAudio to load an audio file to process 
@@ -84,33 +89,30 @@ public class MyVisual extends Visual
         cb = new CloudsBackground(this);
         
         //pt2
+        molecularsBC = new MolecularsBC(this);
         baunceBall = new BounceBall(this);
-        speackersBc = new SpeakersBC(this);
 
         //pt3
-        //pt =  new PoliceText(this);
-
-        //pt4
         bb = new BassBall(this);
+        speackersBc = new SpeakersBC(this);
+
         Lbgw = new LeftBackgroundWaves(this);
         Rbgw = new RightBackgroundWaves(this);
 
-        //pt5
-        molecularsBC = new MolecularsBC(this);
-
-        //pt 6
+        //pt4
         td = new ThirdDrop(this);
         Lyrics = new Lyrics(this);
 
-        // part 7
+        //pt 5
+        cbc = new CirclesBc(this);
+        piano = new Piano(this);
+        
+        // part 6
         planet = new Planet(this);
         fairies = new Fairies(this);
-        
     }
 
-
-    public void keyPressed()
-    {
+    public void keyPressed() {
         if (key == ' ')
         {
             getAudioPlayer().cue(0);
@@ -125,7 +127,6 @@ public class MyVisual extends Visual
             showLyrics = false;
         }
     }
-
 
 
     @Override
@@ -148,7 +149,7 @@ public class MyVisual extends Visual
             case 5: 
                 partFive();
                 break;
-            case 0:
+            case 6: 
                 partSix();
                 break;
             default:
@@ -176,7 +177,10 @@ public class MyVisual extends Visual
                     mode = 4;
                     break;
                 case '5':
-                    mode = 0;
+                    mode = 5;
+                    break;
+                case '6':
+                    mode = 6;
                     break;
                 default:
                     break;
@@ -190,7 +194,8 @@ public class MyVisual extends Visual
 
 
     void partOne(){          
-        calculateAverageAmplitude(); 
+       // colorMode(HSB, 255);
+
         cb.render();
 
         int numStars = PApplet.round(map(getAmplitude(), 0, 1, 0, 50));
@@ -241,14 +246,15 @@ public class MyVisual extends Visual
     }
     
     void partFive(){
-        
-        // steph piano tiles
+       //colorMode(HSB, 255);
+
+        calculateAverageAmplitude(); 
+        cbc.render();
+        piano.render();
     }
 
-    void partSix(){
-        
+    void partSix(){ 
         fairies.render();
         planet.render();
-
     }
 }
