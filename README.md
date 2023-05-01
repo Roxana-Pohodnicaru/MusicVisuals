@@ -30,6 +30,13 @@
 - each of us have our own sections talking about what we coded + how + insert pics of it (can include code too if you want)
 - mention how we combined our workings together
 
+Code section:
+Stephanie Ifeoma Ogu:
+
+Nikka May Omo:
+
+Roxana Pohodnicaru:
+
 # What I am most proud of in the assignment
 
 Stephanie Ifeoma Ogu: The component of this assignment that I am first have to say that we used our knowledge from classes about Java processing to get much more to make this amazing project.  During the work, I have learned a lot. I  was able to solidify our learning and apply my understanding of Java processing in real-world scenarios, and complete a large project.
