@@ -62,8 +62,8 @@ public class MyVisual extends Visual
         
         // Use this to make fullscreen
 
-       // fullScreen();
-       size(displayWidth, displayHeight);
+       fullScreen();
+       //size(displayWidth, displayHeight);
 
         ///Use this to make fullscreen and use P3D for 3D graphics
         //fullScreen(P3D, SPAN); 
