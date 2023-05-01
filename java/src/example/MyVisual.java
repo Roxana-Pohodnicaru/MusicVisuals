@@ -196,6 +196,7 @@ public class MyVisual extends Visual
     void partOne(){          
        // colorMode(HSB, 255);
 
+        calculateAverageAmplitude(); 
         cb.render();
 
         int numStars = PApplet.round(map(getAmplitude(), 0, 1, 0, 50));
