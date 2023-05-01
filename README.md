@@ -30,7 +30,7 @@
 - each of us have our own sections talking about what we coded + how + insert pics of it (can include code too if you want)
 - mention how we combined our workings together
 
-#### Code section
+### Code section
 
 Stephanie Ifeoma Ogu:
 
