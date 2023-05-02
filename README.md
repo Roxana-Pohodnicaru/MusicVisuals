@@ -43,6 +43,10 @@ Stephanie Ifeoma Ogu:
 
 Nikka May Omo:
 
+Stars.java: This file is responsible for the creation of the stars in a dynamic way. Instead of the colour being defined by common RGB values it depends on the hue, saturation and brightness values. I implemented it to have a random hue for the stars to look unique. The heavier the star, the more it brightens up.The star weight and coordinates x and y are generated randomly with the method ‘random’. The calculated star speed is what allows the x and y coordinates to be changed randomly. 
+
+The method stroke determines the colour of the lines that form the star shape. In order to form the star shape, I simply wanted to do it with lines. I utilised a for loop in order to create five lines that start from the centre and it radiates outwards. In order to fully capture the visual of a star I purposely included a circle at the centre of it to make the visual look fuller.My idea was to showcase stars depending on the amplitude. The amount of stars is created with the map method and it is supported by the rounded amplitude taken which is put into numStars. After determining numStars, this is used in a for loop functions for specified number of stars to keep generating. In conclusion, each star will be assigned a random color and its number and movement is dependent on the amplitude of the song. 
+
 Roxana Pohodnicaru: CloudsBackground.java: My idea was to create a cluster of cloud particles that would randomly navigate across the screen. The way that this works is that the small white dots are rendered using the Gaussian distribution function. This means that instead of the dots randomly appearing anywhere on the screen, they will appear within the standard deviation of the mean position.
 
 ![Cluster](images/cluster.png)
