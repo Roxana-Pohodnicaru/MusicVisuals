@@ -5,7 +5,7 @@ import processing.core.*;
 public class ThirdDrop {
     
     MyVisual mv;
-    float t = 0; // time variable for animation
+    float t = 0; // time for the movement
 
     //  first mountain blue, the second mountain pink, the third mountain green, the fourth mountain yellow, and the last mountain orange,
     int[] mountainColors = {0xff0099ff, 0xffff66cc, 0xff00cc66, 0xffffff00, 0xffff9900};
