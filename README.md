@@ -10,7 +10,7 @@
 
 # Visualisation Video
 
-[insert youtube link here]
+https://youtu.be/YO56n8Xqfyg
 
 # Description of the Assignment
 For our assignment, we chose the song "Flare" by Hensonn. From this song we got inspired to do a space theme visual basing it on the cover of their album.
