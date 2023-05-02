@@ -49,6 +49,19 @@ The method stroke determines the colour of the lines that form the star shape. I
 
 Roxana Pohodnicaru: CloudsBackground.java: My idea was to create a cluster of cloud particles that would randomly navigate across the screen. The way that this works is that the small white dots are rendered using the Gaussian distribution function. This means that instead of the dots randomly appearing anywhere on the screen, they will appear within the standard deviation of the mean position.
 
+
+Lyrics.java:
+
+At first, I had PoliceText.java implemented for the lyrics which showcases a series of police tapes moving the opposite direction of each other with the yellow tape moving along. After combining the boombox background, we decided that a simple design is more suitable. The lyrics are “If you were a vegetable, you’d be a cutecumber”. Instead of having the text together I separated them as lyricLeft and lyricRight. it would be more visually pleasing to include more dynamics. Keeping that in mind, lyricLeft is sliding from the left and lyricRight text is sliding from the opposite direction. It is the same idea as PoliceText.java but it is more of a classic design. Using the ‘keyPressed’, the lyrics come into sight, sliding to the centre when key ‘P’ is pressed. With the ‘O’ key, it disappears. In terms of its code, it consists of two methods, update() and render(). I made use of pushStyle in order to store the style. As you can see from the image, the text is set to black for it to stand out and contrast with the background and the moving ball. The previous style setting is brought back with the use of popStyle().
+
+ThirdDrop.java
+
+This is a visualisation of colourful mountain ranges that dynamically move up and down to the amplitude of the music. The different mountains are stacked on top of each other vertically. The first mountain is blue, with a pink mountain arranged on top followed by a green mountain, additionally a yellow mountain and the final mountain is orange. As the colours of the other visuals so far have been rainbow themed, I picked the colours to match it. These colours are in an array “mountainColours” and it is represented in hexadecimal notation for the reason being that using other ways caused conflicts with the code. 
+
+The flowy feature mimicking the shape of the mountains is the result of Perlin noise, the values between 1 and 0, which are produced randomly, are part of it. These are then put into the mapping of the y and x positions to allow the visual to be natural looking. The speed of the mountain is conditioned based on the amplitude which affects the y coordinate of all the vertices. I multiplied it by 200 to allow the mountain to be dynamically moving and project more with amplitude being the main reason. Each mountain is unique as the t variable is increased by 0.01.This mountainous range perfectly fits our overall scenes and matches the boombox teleportation background.
+
+
+
 ![Cluster](images/cluster.png)
 
 BassBall.java: This scene consists of a ball outlined in white. The size of the ball is increased based on the audio buffer. Behind it, there is a circular waveform. The waveform is made up of lines which are drawn from the centre of the screen outwards, depending on the audio buffer. The colour is set based on the index of the current element of the waveform array.
@@ -72,7 +85,7 @@ And secondly, I proud of was the team teamwork. Despite having a busy semester, 
 
 Nikka May Omo: This assignment has me achieve a significant progress in my learning journey for this module. I am most proud of the growth in terms of teamwork and learning more about how to visualise our creative ideas using processing. I was able to become productive and fulfill the deadline we set up thanks to our strict planning and frequent meetings. 
 
-As a student who was worried at the start, I can confidently conclude I am satisfied with the work I contributed. I think the key achievement is that we were able to leverage each other's strengths and overcome any errors that arose during the project. This not only led to a successful outcome but also help me develop interpersonal skills that will serve me well in other future projects.
+As a student who was worried at the start, I can confidently conclude I am satisfied with the work I contributed. I think the key achievement is that we were able to leverage each other's strengths and overcome any errors that arose during the project. This not only led to a successful outcome but also help me develop interpersonal skills that will serve me well in other future projects. Comparing all the visuals, I was responsible for, I appreciate the stars the mountains the most as it looks the more visually appealing and i learned more considering it took me a lot of errors and trials for it work perfectly.
 
 Roxana Pohodnicaru: 
 This is the first big collaborative coding project I’ve worked and I can definitely say that I learned a lot from this experience. 
