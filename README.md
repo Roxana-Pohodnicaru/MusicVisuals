@@ -26,6 +26,9 @@
 
 # How it works
 
+- We attempted to adhere to clean git repository norms. That is why we established the original master branch. That brach has only completed the assignment project. The product code was all on a development branch. We were making modifications in distinct branches, with one for each functionality component. There was also a brach [tracker](https://docs.google.com/spreadsheets/d/1Pr2AN-8XV4XSXAYneuDSKQsDpKSYxk0ziFuhoVzVUMI/edit?usp=sharing). If leads, no one will pull the broken code from development. And we all know that dev is only code, which someone of us still modifies. As a result, no one will pull non-working code to dev. Dev only contains code that some of us are changing. We created pull requests for dev, and in the event of an issue, we addressed disagreements and performed code reviews jointly.
+
+When we feneshed, we did 
 - how we created dev branch -> treated it as master (incase of issues) and made branches from there
 - each of us have our own sections talking about what we coded + how + insert pics of it (can include code too if you want)
 - mention how we combined our workings together
