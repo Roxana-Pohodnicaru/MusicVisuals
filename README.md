@@ -13,24 +13,28 @@
 [insert youtube link here]
 
 # Description of the Assignment
+For our assignment, we chose the song "Flare" by Hensonn. From this song we got inspired to do a space theme visual basing it on the cover of their album.
+We created six visuals that all react to the music. 
+1. Stars and Cloud particles.
+2. Earth inspired background with black circular rim. In addition, a bouncing ball mimicking the DVD screensaver. Lyrics appear "If you were a vegetable you'd be a cutecumber".
+3. Bass ball with waveforms, commonly seen in music videos.
+4. Boombox background that resembles a teleportation portal. With a colourful dynamic mountain range that grows in size. 
+5. A bouncing ball that plays the piano.
+6. Two flashing planets with rotating rings combined with a starry, fairy-like background. 
 
-- what song we chose
-- how many visuals we have
-- what do visuals do
-- mention processing + minim
+We built this project with the processing and minim libraries.
 
 # Instructions
 
-- how we use buttons to move through parts
-- space restart
+- For the controlling mechanism, we transition to another scene using the keyPressed logic with numeric cases ie 1 - 6.
+- As previously mentioned, the lyrics appears in a sliding motion when key 'P' is pressed and it disappears with 'O' key.
+- The space key is responsible for restarting the song.
 
 # How it works
 
-- We attempted to adhere to clean git repository norms. That is why we established the original master branch. That brach has only completed the assignment project. The product code was all on a development branch. We were making modifications in distinct branches, with one for each functionality component. There was also a brach [tracker](https://docs.google.com/spreadsheets/d/1Pr2AN-8XV4XSXAYneuDSKQsDpKSYxk0ziFuhoVzVUMI/edit?usp=sharing). 
-
-As a result, no one will pull non-working code to dev, so we never will face with sutuation that our project was complitely broken by accident. And we all know that dev is only code, which someone of us still modifies.  Dev only contains code that some of us are changing. 
-
-We created pull requests for dev merging our branch code to deve, and in the event of an issue, we addressed disagreements and performed code reviews jointly.
+- how we created dev branch -> treated it as master (incase of issues) and made branches from there
+- each of us have our own sections talking about what we coded + how + insert pics of it (can include code too if you want)
+- mention how we combined our workings together
 
 ### Code section
 
