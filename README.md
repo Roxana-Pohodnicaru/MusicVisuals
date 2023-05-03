@@ -47,7 +47,7 @@ Stars.java: This file is responsible for the creation of the stars in a dynamic 
 
 The method stroke determines the colour of the lines that form the star shape. In order to form the star shape, I simply wanted to do it with lines. I utilised a for loop in order to create five lines that start from the centre and it radiates outwards. In order to fully capture the visual of a star I purposely included a circle at the centre of it to make the visual look fuller.My idea was to showcase stars depending on the amplitude. The amount of stars is created with the map method and it is supported by the rounded amplitude taken which is put into numStars. After determining numStars, this is used in a for loop functions for specified number of stars to keep generating. In conclusion, each star will be assigned a random color and its number and movement is dependent on the amplitude of the song. 
 
-Roxana Pohodnicaru: CloudsBackground.java: My idea was to create a cluster of cloud particles that would randomly navigate across the screen. The way that this works is that the small white dots are rendered using the Gaussian distribution function. This means that instead of the dots randomly appearing anywhere on the screen, they will appear within the standard deviation of the mean position.
+
 ![Star](images/stars.png)
 
 
@@ -63,7 +63,7 @@ This is a visualisation of colourful mountain ranges that dynamically move up an
 The flowy feature mimicking the shape of the mountains is the result of Perlin noise, the values between 1 and 0, which are produced randomly, are part of it. These are then put into the mapping of the y and x positions to allow the visual to be natural looking. The speed of the mountain is conditioned based on the amplitude which affects the y coordinate of all the vertices. I multiplied it by 200 to allow the mountain to be dynamically moving and project more with amplitude being the main reason. Each mountain is unique as the t variable is increased by 0.01.This mountainous range perfectly fits our overall scenes and matches the boombox teleportation background.
 ![Mountain](images/mountain.png)
 
-
+Roxana Pohodnicaru: CloudsBackground.java: My idea was to create a cluster of cloud particles that would randomly navigate across the screen. The way that this works is that the small white dots are rendered using the Gaussian distribution function. This means that instead of the dots randomly appearing anywhere on the screen, they will appear within the standard deviation of the mean position.
 ![Cluster](images/cluster.png)
 
 BassBall.java: This scene consists of a ball outlined in white. The size of the ball is increased based on the audio buffer. Behind it, there is a circular waveform. The waveform is made up of lines which are drawn from the centre of the screen outwards, depending on the audio buffer. The colour is set based on the index of the current element of the waveform array.
