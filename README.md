@@ -12,6 +12,20 @@
 
 https://youtu.be/YO56n8Xqfyg
 
+# List of Classes
+
+|Classes|
+|-----------|
+|CloudsBackground.java|
+|BassBall.java|
+|LeftBackgroundWaves.java|
+|RightBackgroundWaves.java|
+|Planet.java|
+|Fairies.java|
+||
+||
+||
+
 # Description of the Assignment
 For our assignment, we chose the song "Flare" by Hensonn. From this song we got inspired to do a space theme visual basing it on the cover of their album.
 We created six visuals that all react to the music. 
@@ -64,6 +78,7 @@ The flowy feature mimicking the shape of the mountains is the result of Perlin n
 ![Mountain](images/mountain.png)
 
 Roxana Pohodnicaru: CloudsBackground.java: My idea was to create a cluster of cloud particles that would randomly navigate across the screen. The way that this works is that the small white dots are rendered using the Gaussian distribution function. This means that instead of the dots randomly appearing anywhere on the screen, they will appear within the standard deviation of the mean position.
+
 ![Cluster](images/cluster.png)
 
 BassBall.java: This scene consists of a ball outlined in white. The size of the ball is increased based on the audio buffer. Behind it, there is a circular waveform. The waveform is made up of lines which are drawn from the centre of the screen outwards, depending on the audio buffer. The colour is set based on the index of the current element of the waveform array.
