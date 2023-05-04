@@ -74,7 +74,10 @@ The loop runs from zero to the length of the AudioBuffer. The AudioBuffer elemen
 <img width="804" alt="Screenshot 2023-05-04 at 09 47 40" src="https://user-images.githubusercontent.com/80353486/236155474-ade8f325-d736-439c-a082-ecd4b5276784.png">
 
 
-Piano.java:
+Piano.java: My favorite class is piano. It is quite simple to perform. Drawn using piano rectangles. From the amplitude values, the amplitude range is calculated and a specific frequency is assigned to each key. When the frequency of the song coincides with the frequency of the key, it is visually "pressed" - it changes color and slightly moves forward. In the first version of the piano, RGB colors were used - and the tiles changed color (a screenshot is given), but we decided to use HSB later, because it was more suitable for the colors of the rest of the project. It also draws a ball, whose position is calculated in the same way as the frequency range of the piano tiles.
+
+CirclesBc.java: This code generates the appearance of oscillating lines in the shape of circular waves on a black screen. The backdrop color is first set to black. It generates an array of soundforms before determining the color and thickness of the lines. It computes the number of lines to be created as well as the width of each line to fit the complete width of the screen. The X and Y coordinates of the line are then determined for each member in the soundform array. For each line, an offset value is produced using the noise function "noise" and the time variable "t". A vertical line is produced using the computed coordinates and offset value for each line. 
+The time variable "t" is raised by 0.1, resulting in smooth frame shifts and a motion effect.
 
 <img width="802" alt="Screenshot 2023-05-04 at 09 48 24" src="https://user-images.githubusercontent.com/80353486/236155647-1e63610b-1a9f-4d36-9669-01acc67a56bb.png">
 <img width="797" alt="Screenshot 2023-05-04 at 09 48 42" src="https://user-images.githubusercontent.com/80353486/236155733-a6ed8d74-5370-44a6-810c-2471cad80b0b.png">
