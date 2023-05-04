@@ -55,6 +55,33 @@ We built this project with the processing and minim libraries.
 
 Stephanie Ifeoma Ogu:
 
+BounceBall.java: This file draws a ball that bounces against the window's edges as it moves randomly across the screen. Every time, the color of the ball changes at random. Its speed is connected to the music amplitude. It appear first in a random place of screen and have a random speed form in range of -1 to 1, random angle of direction, random colour. The color of the ball is set in the HSB color mode using the fill() function in the render() method. The ball's speed is then governed by the amplitude of the music, which is read using the getAmplitude() function. Following that, the ball moves across the screen at the specified speeds and angles. 
+
+MolecularsBC.java: This file contains a class for creating graphics-based animations. The constructor generates a new 'PGraphics' graphics object with the same size as the application window. The'render()' function iterates over each place in the application window and creates several rectangles using stacked loops. The size of each rectangle is defined by the distance between its location and the center of the window, and the color is determined by noise values produced with the 'noise()' function. For this The distance variable is calculated by 'dist()' function, which simply computes the distance between two locations in two-dimensional space. Thus, the farther from the center of the screen the point is, the smaller the size of the molecule. This creates a gradient effect where the molecules in the center of the screen are larger and brighter, while those at the periphery are smaller and faded. On the screen we see on the 'pg' graphics object with this planet/molecular background.
+
+<img width="797" alt="Screenshot 2023-05-04 at 09 44 17" src="https://user-images.githubusercontent.com/80353486/236154679-fccc55b6-5c3f-4d42-baaf-4c37aa8628aa.png">
+
+
+SpeakersBC.java: This code draws animated graphic elements on the background of the screen. The `ballX` and `ballY` variables are responsible for the coordinates of the center of the circles that will be drawn in each iteration of the loop. The original idea was to make a red background for the hole, but it looked more like a speaker. But after the purpose of this class changed to the background of the sky, which became the sky for the mountains of a suitable blue color.
+
+The main logic happens in the `for` loop. It is used to display squares in a grid. Two nested loops go through all the squares on the screen, and for each square, the distance from the center of the screen to the center of the square is calculated. The noise value is then calculated using `mv.noise()`. This value is used to set the transparency of the square, which creates an animation effect.
+
+In each iteration of the `for` loop, the `mv.fill()` method is called to set the fill color, `mv.rect()` to draw a square on the screen. The squares are drawn based on the value of the loop counter `i` and `j` multiplied by the size of the square `squareSize`.
+This code draws animated graphic elements on the background of the screen.
+
+The loop runs from zero to the length of the AudioBuffer. The AudioBuffer element is responsible for the x-axis. Next, the nested loop calculates the distance to the y-axis, going through 50 times (this number does not affect anything). The coordinates of each square are calculated and a random noise value is generated based on the distance and the current frame. alphaValue is responsible for the degree of transparency.
+
+<img width="804" alt="Screenshot 2023-05-04 at 09 47 40" src="https://user-images.githubusercontent.com/80353486/236155474-ade8f325-d736-439c-a082-ecd4b5276784.png">
+
+
+Piano.java:
+
+<img width="802" alt="Screenshot 2023-05-04 at 09 48 24" src="https://user-images.githubusercontent.com/80353486/236155647-1e63610b-1a9f-4d36-9669-01acc67a56bb.png">
+<img width="797" alt="Screenshot 2023-05-04 at 09 48 42" src="https://user-images.githubusercontent.com/80353486/236155733-a6ed8d74-5370-44a6-810c-2471cad80b0b.png">
+
+
+
+
 Nikka May Omo:
 
 Stars.java: This file is responsible for the creation of the stars in a dynamic way. Instead of the colour being defined by common RGB values it depends on the hue, saturation and brightness values. I implemented it to have a random hue for the stars to look unique. The heavier the star, the more it brightens up.The star weight and coordinates x and y are generated randomly with the method ‘random’. The calculated star speed is what allows the x and y coordinates to be changed randomly. 
