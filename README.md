@@ -130,6 +130,15 @@ Stephanie Ifeoma Ogu: The component of this assignment that I am first have to s
 
 And secondly, I proud of was the team teamwork. Despite having a busy semester, we were still able to collaborate well on this assignment. Setting deadlines and establishing separate channels of communication helped us to operate methodically and successfully. It was remarkable to witness how we helped one another, worked together to tackle challenging issues, and united our efforts. We used the different strengths that each member of our team possessed to get beyond mistakes and roadblocks. I improved my interpersonal abilities via this assignment, which will be helpful for future team initiatives. Overall, I am pleased with the work.
 
+I'd want to highlight Piano and SpeakersBC from what I've written.
+
+In the Piano lesson, I created a gorgeous and interactive piano interface using several Processing features. To create an app that plays musical notes and allows you to play the virtual piano, I used my experience of visuals, animations, multi-touch input, and sound effects. I'm delighted to have produced a useful and visually appealing software for making music and learning to play the piano.
+
+I utilized my experience of working with graphic components and sound input in the SpeakersBC class to construct a backdrop animation that responds to sound. I utilized the audio input to analyze the audio stream and build visual components that move and change color as the music played. I am delighted to have made a beautiful and effective animation that may be used as a background for a music video or concert.
+
+In both situations, I'm glad to have utilized my knowledge and abilities to build something helpful and attractive that others may use to educate and delight themselves.
+
+
 Nikka May Omo: This assignment has me achieve a significant progress in my learning journey for this module. I am most proud of the growth in terms of teamwork and learning more about how to visualise our creative ideas using processing. I was able to become productive and fulfill the deadline we set up thanks to our strict planning and frequent meetings. 
 
 As a student who was worried at the start, I can confidently conclude I am satisfied with the work I contributed. I think the key achievement is that we were able to leverage each other's strengths and overcome any errors that arose during the project. This not only led to a successful outcome but also help me develop interpersonal skills that will serve me well in other future projects. Comparing all the visuals, I was responsible for, I appreciate the stars the mountains the most as it looks the more visually appealing and i learned more considering it took me a lot of errors and trials for it work perfectly.
