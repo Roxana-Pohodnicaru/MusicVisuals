@@ -25,6 +25,12 @@ https://youtu.be/YO56n8Xqfyg
 |Stars.java|
 |Lyrics.java|
 |ThirdDrop.java|
+|BounceBall.java|
+|MolecularsBC.java|
+|SpeakersBC.java|
+|Piano.java|
+|CirclesBc.java|
+
 
 # Description of the Assignment
 For our assignment, we chose the song "Flare" by Hensonn. From this song we got inspired to do a space theme visual basing it on the cover of their album.
